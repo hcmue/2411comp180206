@@ -1,0 +1,33 @@
+.hh-box-price{
+    position: absolute; left: 5px; bottom: 5px;
+    font-size: larger; font-weight: bolder; color: gray;
+}
+.hh-box{
+    width: 220px; height: 300px; border: 1px solid red; text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 30px 5px 5px 5px;
+}
+.hh-box:hover{ border: 2px double blue; border-radius: 7px;}
+.hh-box-img{
+    width: 200px; margin-top: 7px;
+}
+.hh-box-icon-new{
+    width: 70px; position: absolute; top: 0; right: 0;
+}
+.hh-box-actions {
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+    width: 25px;
+}
+
+.hh-box-actions img {
+    cursor: pointer;
+    border: 0px;
+}
+
+.hh-box-name{
+    position: absolute; top: -25px;
+    color: blue; font-size: x-large;
+}
