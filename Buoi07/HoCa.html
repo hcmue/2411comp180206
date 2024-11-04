@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ cá</title>
+    <style>
+        #hoca{
+            position: relative; height: 400px; border: 2px double blue;
+            background-image: url('images/background.jpg');
+        }
+        @keyframes caboi {
+            0%{position: absolute; left:0; top: 20px;}
+            25%{position: absolute; left:300px; top: 200px;}
+            50%{position: absolute; left:500; top: 200px; transform: rotate(-180deg);}
+            75%{position: absolute; left:300px; top: 200px;}
+            100%{position: absolute; left:0; top: 20px;}
+        }
+        #ca{animation-name: caboi; animation-duration: 20s; animation-iteration-count: infinite;}
+    </style>
+</head>
+<body>
+    <div id="hoca">
+        <img id="ca" src="images/shark.png" alt="SHARK" />
+    </div>
+</body>
+</html>
