@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mytd{width: 80px; height: 80px; border: 1px solid red; text-align: center;}
+    </style>
+</head>
+<body>
+    <div>
+        Nhập số ô:
+        <input type="number" id="so_o">
+        <button type="button" id="btnTaoBanCo">Tạo bàn cờ</button>
+    </div>
+    <table id="tblBanCo"></table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnTaoBanCo").click(function(){
+                let so_o = parseInt($("#so_o").val());
+                for (i = 0; i < so_o; i++){
+                    let tr = $("<tr></tr>");
+                    for(j = 0; j < so_o; j++){
+                        $("<td></td>").appendTo(tr);
+                    }
+                    $("#tblBanCo").append(tr);
+                }
+                $("td").addClass("mytd");
+                let gt = "X";
+                $("td").click(function () {
+                    if ($(this).html() === "") {
+                        $(this).html(gt);
+                        gt = gt === "X" ? "O" : "X";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
